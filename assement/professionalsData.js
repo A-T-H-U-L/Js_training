@@ -1,8 +1,9 @@
-
+readline = require('readline-sync')
+array = new Array()
 class ProfessionalsData {
-    readline = require('readline-sync')
-    professional = new ProfessionalsData();
-    array = new Array()
+
+    //professional = new ProfessionalsData();
+  
 
     constructor(professionalsName, locality, experience, specialty) {
         this.professionalsName = professionalsName;
@@ -11,44 +12,17 @@ class ProfessionalsData {
         this.specialty = specialty;
     }
 
-    get professionalsName() {
-        return this.professionalsName;
-    }
-
-    get locality() {
-        return this.locality;
-
-    }
-    get experience() {
-        return this.experience;
-    }
-    get specialty() {
-        return this.specialty
-    }
-    set professionalsName(value) {
-        this.professionalsName = value;
-    }
-    set locality(value) {
-        this.locality = value;
-    }
-    set experience(value) {
-        this.experience = value;
-    }
-    set specialty(value) {
-        this.experience = value;
-    }
-
-
-
+    
 
     addprofessional(objectOfInputData) {
 
         array.push(objectOfInputData);
-        return this.array;
+        console.log(array)
+        return array;
     }
     deleteprofessional(inputByUser) {
         array.forEach((element) => {
-            if (element.pname === inputByUser) {
+            if (element.professionalsName === inputByUser) {
 
                 arr.splice(i, 1)
                 // console.log(arr)
@@ -61,18 +35,37 @@ class ProfessionalsData {
     }
 
 
-    nameOfAccountent = rl.question("enter name of Accountent  :\n");
+    //  nameOfAccountent = readline.question("enter name of Accountent  :\n");
 
+    updateSpecialityOfprofessional(newSpeciality) {
+        this.speciality=newSpeciality
+        console.log(array)
+        return array;
 
+    }
+
+    updateExperienceOfprofessional(newExperience) {
+        this.experience=newExperience
+           console.log(array)
+           return array;
+   
+       }
+
+    updateNameOfprofessional(newName) {
+        this.professionalsName=newName;
+        console.log(array)
+        return array;
+    }
     updateprofessional(nameOfAccountent) {
-        let update;
-        this.array.forEach((value) => {
+        let update,newName,newlocality,newExperience;
+        let valueToUpdate;
+        array.forEach((value) => {
 
             if (value.professionalsName == nameOfAccountent) {
                 valueToUpdate = readline.question("what catergory want to change (name/locality/experience) :")
                 switch (valueToUpdate) {
                     case "name": newName = readline.question("enter new name :")
-                        updateNameOfprofessional(newName)
+                      this.updateNameOfprofessional(newName)
 
                         break;
                     case "locality": newlocality = readline.question("enter your new locality")
@@ -111,30 +104,11 @@ class ProfessionalsData {
         return update;
     }
 
-    updateNameOfprofessional(newName) {
-        professional.professionalsName(newName);
-        console.log(this.array)
-        return this.array;
-    }
+ 
 
-    updateLocalityOfprofessional(newlocality) {
-        professional.locality(newlocality);
-        console.log(this.array)
-        return this.array;
-    }
 
-    updateExperienceOfprofessional(newExperience) {
-        professional.experience(newExperience);
-        console.log(this.array)
-        return this.array;
+ 
 
-    }
-    updateSpecialityOfprofessional(newSpeciality) {
-        professional.specialty(newSpeciality);
-        console.log(this.array)
-        return this.array;
-
-    }
 
 
     view(array) {
@@ -146,4 +120,5 @@ class ProfessionalsData {
     }
 
 }
-module.exports=new ProfessionalsData()
+
+module.exports = ProfessionalsData;

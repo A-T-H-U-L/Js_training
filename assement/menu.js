@@ -9,21 +9,22 @@ class Menu{
      menu(){
     let userInput= readline.question("Enter The Option\n1 Admin\n2 User")
 
-switch (userInput) {
-    case "1":
-        obj.checkingUserType("ADMIN");
-        
-        break;
-        case "2":
-        
+    switch (userInput) {
+        case "1":
+            obj.checkingUserType("ADMIN");
+            
             break;
+            case "2":
+            
+                break;
 
-    default:"wrong Input"
-        break;
-}
+        default:"wrong Input"
+            break;
+    }
 
 
 }
 
 };
+// new Menu().menu();
 module.exports=Menu;
