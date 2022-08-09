@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+.division{
+    text-align: center;
+}
+
+#header{
+ 
+    min-height: 350px;
+    min-width: 1263px;
+    height:350px;
+
+
+}
+
+#body{
+    background-color:ghostwhite;
+    min-height: 1375px;
+}
+#footer{
+    background-color: darkgray;
+    min-height: 100px;
+    min-width: 1263px;
+    padding: 10px;
+    text-align: center;
+}
+#container{
+    background-color :ivory;
+    top: -100px;
+    width: 80%;
+    height: px;
+    position: relative;
+    border-radius:25px ;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 0;
+    
+
+}
+
+#containerChild2{
+    height: 520px;
+    width: 160px;
+    background-color:white;
+    border-radius:25px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+   
+
+}
+#containerChild3{
+    height: 1075px;
+    width: 776px;
+    background-color:dimgrey;
+    border-radius:25px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 15px;
+    
+}
+#containerChild2-1,#containerChild2-2,#containerChild2-3,#containerChild2-4,#containerChild2-5{
+
+    height: 100px;
+    width: 140px; 
+    margin-left: 10px;
+    background-color: lemonchiffon;
+    border-radius:15px;
+}
+#containerChild2-1{
+    background-color:#ff014f ;
+}
+#containerChild2-2:hover{
+    background-color:#ff014f;
+}
+#containerChild2-3:hover{
+    background-color:#ff014f;
+}
+#containerChild2-4:hover{
+    background-color:#ff014f;
+}
+#containerChild2-5:hover{
+    background-color:#ff014f;
+}
+#containerChild2-1{
+    margin-top: 10px;
+}
+#containerChild2-5{
+    margin-bottom: 10px;
+}
+#containerChild1{
+    top: -100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: ivory;
+    position: relative;
+    margin-left: 43px;
+
+}
+#containerChild3-1{
+   margin-top: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+   background-color:thistle;
+   border-radius: 10px;
+  min-width:  500px;
+  min-height: 700px;
+   position: relative;
+
+
+}
+#containerChild3-2{
+    margin-top: 30px;
+    background-color:thistle;
+    border-radius: 10px;
+   min-width:  500px;
+   margin-left: 10px;
+   margin-right: 10px;
+   min-height: 280px;
+    position: relative;
+ 
+ 
+ }
+ #containerChild3-2_1{
+     margin: 30px;
+     min-width: 120px;
+     min-height: 225px;
+     position: relative;
+     float: left;
+     background-color: tomato;
+     border-radius: 20px;
+ }
+ #containerChild3-2_2{
+    margin: 30px;
+     min-width: 120px;
+     min-height: 225px;
+     position: relative;
+     float: left;
+     background-color: tomato;
+     border-radius: 20px;
+}
+#containerChild3-2_3{
+    margin: 30px;
+    min-width: 125px;
+    min-height: 225px;
+    position: relative;
+    float: left;
+    background-color: tomato;
+    border-radius: 20px;
+}
+#containerChild3-2_4{
+    margin: 30px;
+    min-width: 125px;
+    min-height: 225px;
+    position: relative;
+    float: left;
+    background-color: tomato;
+    border-radius: 20px;
+}
+#img1{
+width: 100%;
+    height: 100%;
+    border-radius: 0.5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#img2{
+
+    border-radius: 0.5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    border-radius: 25px;
+    margin-top: 3.5px;
+}
+  #containerChid1-1Child{
+      
+      height: 180px;
+      top: -100px;
+      min-width:883px;
+      position: relative;
+      z-index: -1;
+      margin-top: 10px;
+
+    
+
+  }
+  #nameText{
+      color: #000;
+      margin-left: 215px;
+      margin-top:-93px;
+      position: fixed;
+      font-family: 'Times New Roman', Times, serif;
+  }
+  #jobText{
+    margin-left: -224px;
+    margin-top:-55px ;
+    position: fixed;
+
+  }
+  #verticalLine{
+width: 0.1px;
+background-color: rgb(182, 182, 179);
+height: 150px;
+margin-top: -53px;
+margin-left: 400px;
+box-shadow: 2px 2px ivory;
+
+
+  }
+#table-1{
+    margin-left: 447px;
+    margin-top: -151px;
+}
+.tabelCell{
+    width: 250px;
+ 
+    text-align: left;
+    padding: 2px;
+}
+.tabelCell1{
+    width: 250px;
+    background-color :lightcoral;
+    text-align: left;
+    
+}
+.table{
+    margin-top: 13px;
+    margin-left: 217px;
+    text-align: left;
+}
+#nameText{
+    text-size-adjust: 10px;
+}
