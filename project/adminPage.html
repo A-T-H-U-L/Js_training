@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap Simple Data Table</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="adminPage.css">
+<style>
+   
+</style>
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-4"><h2>Employee <b>Details</b></h2></div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2"><a href="addEmployee.html">
+                        <button class="btn btn-outline-secondary form-control" style=" border-radius: 25px; box-shadow:3px 3px 1px  teal;">Add</button>
+                    </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="search-box">
+                            <i class="material-icons">&#xE8B6;</i>
+                            
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>No:</th>
+                        <th>Name </i></th>
+                        <th>Account</th>
+                        <th>Salary </i></th>
+                        <th>Project</th>
+                        <th>Gender </th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Thomas Hardy</td>
+                        <td>Netscape.</td>
+                        <td>350000</td>
+                        <td>a</td>
+                        <td>male</td>
+                        <td>
+                            <a href="editEmployee.html" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Maria Anders</td>
+                        <td>Walmart</td>
+                        <td>450000</td>
+                        <td>B</td>
+                        <td>Female</td>
+                        <td>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fran Wilson</td>
+                        <td>Tsg</td>
+                        <td>500000</td>
+                        <td>C</td>
+                        <td>Male</td>
+                        <td>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Dominique Perrier</td>
+                        <td>Darwin Box</td>
+                        <td>350000</td>
+                        <td>D</td>
+                        <td>Male</td>
+                        <td>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                        
+                </tbody>
+            </table>
+           
+        </div>
+    </div>  
+</div> 
+<script>
+
+    
+let tbody = document.querySelector('table tbody');
+
+var request = new XMLHttpRequest();
+
+// Instantiating the request object
+
+// Defining event listener for readystatechange event
+
+request.onload = function () {
+
+  // Check if the request is compete and was successful
+
+  if (this.readyState === 4 && this.status === 200) {
+
+    // Inserting the response from server into an HTML element
+
+    
+
+    let data = JSON.parse(this.responseText);
+
+    data.forEach(employee => {
+
+      let row = document.createElement('tr');
+
+      let column1 = document.createElement('td');
+
+      column1.innerHTML = employee.No;
+
+      let column2 = document.createElement('td');
+
+      column2.innerHTML = employee.Name;
+
+
+
+      let column3 = document.createElement('td');
+
+      column3.innerHTML = employee.Account;
+
+     
+
+      let column4 = document.createElement('td');
+
+      column4.innerHTML = employee.Salary;
+
+      let column5 = document.createElement('td');
+
+    column5.innerHTML = employee.Project;
+
+    let column6 = document.createElement('td');
+
+    column6.innerHTML = employee.Gender;
+    
+
+      let column7= document.createElement('td');
+
+      column7.innerHTML=`<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>`
+
+      row.appendChild(column1)
+
+      row.appendChild(column2)
+
+      row.appendChild(column3)
+
+      row.appendChild(column4)
+
+      row.appendChild(column5)
+
+      row.appendChild(column6)
+
+      row.appendChild(column7)
+
+
+      tbody.append(row)
+
+    })
+
+    console.log(data);
+
+  }
+
+};
+
+
+
+request.open("GET", "./employee.json");
+
+// Sending the request to the server
+
+request.send();
+
+
+
+
+
+
+
+
+
+console.log(tbody);
+
+</script>  
+</body>
+</html>
