@@ -1,5 +1,5 @@
 .card{
-    margin-top: 250px;
+    margin-top: 16vh;
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
@@ -20,3 +20,4 @@
 input{
     border-radius: 25px;
 }
+

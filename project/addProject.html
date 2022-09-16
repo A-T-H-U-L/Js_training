@@ -145,57 +145,34 @@
             <div class="col"></div>
             <div class="col">
               <div class="card">
-                <!-- <form class="row"> -->
+                <form class="row">
                     <div class="col-md-6">
-                      <label class="form-label" >First Name</label>
+                      <label class="form-label" >Project ID</label>
                       <input type="text" class="form-control " id="firstname" required>
                     </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="lastname">
-                    </div>
+                    
                     <div class="col-md-12">
-                      <label class="form-label">Account</label>
+                      <label class="form-label">Project Name</label>
                       <input type="text" class="form-control" required minlength="3" id="account">
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label">Salary</label>
+                      <label class="form-label">Project Manager</label>
                       <input type="number" class="form-control" id="salary">
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label">Project</label>
-                      <select name=""  class="form-select" id="project">
-                        <option value="">A</option>
-                        <option value="">B</option>
-                        <option value="">C</option>
-                        <option value="">D</option>
-                      </select>
+                      <label class="form-label">Duration</label>
+                      <input type="number" class="form-control" id="duration">
                     </div>
                  
                     
-                    <div class="col-md-12">
-                      <label class="form-label">Gender</label>
-                      <br>
-                      <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" style="border-radius: 25px;" checked id="male">
-                        <label class="form-check-label">Male</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" id="female" checked>
-                        <label class="form-check-label">Female</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" id="other" checked>
-                        <label class="form-check-label">Other</label>
-                      </div>
-                    </div>
+                  
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
                       <br>
-                      <button class="btn btn-outline-secondary form-control" style="border-radius: 25px; box-shadow:6px 6px 3px  teal;" onclick="add()">Submit</button>
+                      <button class="btn btn-outline-secondary form-control" style="border-radius: 25px; box-shadow:6px 6px 3px  teal;" >Submit</button>
                     </div>
                     <div class="col-sm-3"></div>
-                <!-- </form> -->
+                </form>
               </div>
               
             </div>
@@ -205,7 +182,7 @@
     </div>
 </div>
 
-  <script src="addEmployee.js"></script>
+  <!-- <script src="addEmployee.js"></script> -->
 
 </body>
 </html>
