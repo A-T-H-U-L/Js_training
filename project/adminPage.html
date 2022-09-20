@@ -247,6 +247,17 @@ $(document).ready(function(){
     </div>  
 </div> 
 <script>
+
+
+    function deleteEmployee(event){
+    console.log(event)
+   
+    event.path[3].innerHTML=null;
+   
+}
+
+
+
 function edit(id){
     console.log(id)
 
@@ -314,7 +325,7 @@ request.onload = function () {
                         <!-- Button trigger modal -->
                        
 
-    <a href="#"  class="delete" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="material-icons">&#xE872;</i></a>
+    <a href="#"  class="delete" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick="deleteEmployee(event)"><i class="material-icons"  >&#xE872;</i></a>
 
 
 <!-- Modal -->
@@ -330,7 +341,7 @@ request.onload = function () {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-danger" >Delete</button>
       </div>
     </div>
   </div>
