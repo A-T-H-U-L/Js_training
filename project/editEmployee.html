@@ -41,10 +41,10 @@
                     <div class="col-md-6">
                       <label class="form-label">Project</label>
                       <select name="" id="project" class="form-select" >
-                        <option id="project" value="" >A</option>
-                        <option value="">B</option>
-                        <option value="">C</option>
-                        <option value="">D</option>
+                        <option id="project" value="A" >A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
                       </select>
                     </div>
                  
@@ -53,15 +53,15 @@
                       <label class="form-label">Gender</label>
                       <br>
                       <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" style="border-radius: 25px;" checked>
+                        <input type="radio" class="form-check-input" name="rdo" style="border-radius: 25px;" value="Male" id="male" checked>
                         <label class="form-check-label">Male</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo">
+                        <input type="radio" class="form-check-input" name="rdo" value="Female" id="female">
                         <label class="form-check-label">Female</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo">
+                        <input type="radio" class="form-check-input" name="rdo" value="other">
                         <label class="form-check-label">Other</label>
                       </div>
                     </div>
@@ -146,8 +146,16 @@ let project=document.getElementById('project');
 
 project.value=value.Project;
 
-let gender=document.getElementById('gender');
 
+ gender=document.getElementById('gender');
+if(value.Gender=="Male"){
+ var male= document.getElementById('male')
+ male.setAttribute('checked','')
+}
+if(value.Gender=="Female"){
+ var female= document.getElementById('female')
+ female.setAttribute('checked','')
+}
 gender.value=value.Gender;
 
 form.appendChild(fname);
@@ -188,7 +196,7 @@ request.send();
 
 
 
-;
+
 
     </script>
 </body>
