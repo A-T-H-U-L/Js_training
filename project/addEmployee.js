@@ -28,3 +28,33 @@ console.log('Name:'+firstname+lastname+"\n" + 'Account:'+account+"\n" + 'Salary:
 
 
 }
+
+const form = document.getElementById('form-id');
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  alert('submitting');
+  const firstname= document.getElementById('firstname').value
+   const lastname= document.getElementById('lastname').value
+   const account=document.getElementById('account').value
+   const salary= document.getElementById('salary').value
+   const project= document.getElementById('project').value
+   var gender;
+   let input=document.querySelectorAll('input')
+   input.forEach(value=>{
+      console.log(value.value)
+   })
+   console.log(firstname)
+if(document.getElementById('male').checked)   {
+   var gender='male'
+
+}
+if(document.getElementById('female').checked)   {
+   var gender='female'
+   
+}
+if(document.getElementById('others').checked)   {
+   var gender='others'
+}
+console.log('Name:'+firstname+lastname+"\n" + 'Account:'+account+"\n" + 'Salary:'+salary+"\n" + 'Project:'+project+"\n" +'Gender:'+gender+"\n")
+});

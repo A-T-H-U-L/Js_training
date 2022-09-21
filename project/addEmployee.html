@@ -145,10 +145,10 @@
             <div class="col"></div>
             <div class="col">
               <div class="card">
-                <!-- <form class="row"> -->
+                <form class="row" id="form-id">
                     <div class="col-md-6">
                       <label class="form-label" >First Name</label>
-                      <input type="text" class="form-control " id="firstname" required>
+                      <input type="text" class="form-control " id="firstname" value="" required>
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Last Name</label>
@@ -165,10 +165,10 @@
                     <div class="col-md-6">
                       <label class="form-label">Project</label>
                       <select name=""  class="form-select" id="project">
-                        <option value="">A</option>
-                        <option value="">B</option>
-                        <option value="">C</option>
-                        <option value="">D</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
                       </select>
                     </div>
                  
@@ -177,25 +177,25 @@
                       <label class="form-label">Gender</label>
                       <br>
                       <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" style="border-radius: 25px;" checked id="male">
+                        <input type="radio" class="form-check-input" name="rdo" style="border-radius: 25px;" id="male">
                         <label class="form-check-label">Male</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" id="female" checked>
+                        <input type="radio" class="form-check-input" name="rdo" id="female">
                         <label class="form-check-label">Female</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" name="rdo" id="other" checked>
+                        <input type="radio" class="form-check-input" name="rdo" id="others" >
                         <label class="form-check-label">Other</label>
                       </div>
                     </div>
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
                       <br>
-                      <button class="btn btn-outline-secondary form-control" style="border-radius: 25px; box-shadow:6px 6px 3px  teal;" onclick="add()">Submit</button>
+                      <button class="btn btn-outline-secondary form-control" style="border-radius: 25px; box-shadow:6px 6px 3px  teal;" type="submit">Submit</button>
                     </div>
                     <div class="col-sm-3"></div>
-                <!-- </form> -->
+                </form>
               </div>
               
             </div>

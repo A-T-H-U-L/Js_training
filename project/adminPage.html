@@ -253,6 +253,7 @@ $(document).ready(function(){
 <script>
    function deleteEmployee(row){
       var d = row.parentNode.parentNode.rowIndex;
+      console.log(row)
       document.getElementById('datatable').deleteRow(d);
    }
 
@@ -331,7 +332,7 @@ request.onload = function () {
       <a href="#" class="edit" title="Edit" data-toggle="tooltip" ><i class="material-icons" onclick="edit('${employee.Id}')">&#xE254;</i></a>
                         <!-- Button trigger modal -->
                        
-    <a href="#"  class="delete" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick="deleteEmployee(this)"><i class="material-icons"  >&#xE872;</i></a>
+    <a href="#"  class="delete" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="material-icons"  >&#xE872;</i></a>
   
 
 <!-- Modal -->
@@ -347,7 +348,7 @@ request.onload = function () {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" >Delete</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onClick="deleteEmployee(this)" >Delete</button>
       </div>
     </div>
   </div>
